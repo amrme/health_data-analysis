@@ -8,9 +8,17 @@ output:
 
 ## Loading and preprocessing the data
 
+* I'm going to load the data from a CSV file into a data frame in the main memory; to perform the rest of the analysis on it.
 
+* I chose to convert it into a data frame in order to make it easy, to use the data with the ggplot2 plotting system.
 
-## What is mean total number of steps taken per day?
+```{r}
+healthData <- read.csv2("./activity.csv", sep = ",")
+head(healthData)
+```
+
+## What is metal number of steps taken per day?
+
 
 
 

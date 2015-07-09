@@ -66,9 +66,22 @@ img {
 
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
+<ul>
+<li><p>I’m going to load the data from a CSV file into a data frame in the main memory; to perform the rest of the analysis on it.</p></li>
+<li><p>I chose to convert it into a data frame in order to make it easy, to use the data with the ggplot2 plotting system.</p></li>
+</ul>
+<pre class="r"><code>healthData &lt;- read.csv2(&quot;./activity.csv&quot;, sep = &quot;,&quot;)
+head(healthData)</code></pre>
+<pre><code>##   steps       date interval
+## 1    NA 2012-10-01        0
+## 2    NA 2012-10-01        5
+## 3    NA 2012-10-01       10
+## 4    NA 2012-10-01       15
+## 5    NA 2012-10-01       20
+## 6    NA 2012-10-01       25</code></pre>
 </div>
-<div id="what-is-mean-total-number-of-steps-taken-per-day" class="section level2">
-<h2>What is mean total number of steps taken per day?</h2>
+<div id="what-is-metal-number-of-steps-taken-per-day" class="section level2">
+<h2>What is metal number of steps taken per day?</h2>
 </div>
 <div id="what-is-the-average-daily-activity-pattern" class="section level2">
 <h2>What is the average daily activity pattern?</h2>

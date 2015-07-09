@@ -17,9 +17,15 @@ healthData <- read.csv2("./activity.csv", sep = ",")
 head(healthData)
 ```
 
-## What is metal number of steps taken per day?
+## What is mean total number of steps taken per day?
 
+* First I'll help visualize the total number of steps taken each day, using a histogram.
 
+```{r}
+library(ggplot2)
+h <- ggplot(healthData, aes(x = steps)) 
+h + geom_histogram()
+```
 
 
 ## What is the average daily activity pattern?

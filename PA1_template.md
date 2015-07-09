@@ -23,9 +23,22 @@ head(healthData)
 ## 6    NA 2012-10-01       25
 ```
 
-## What is metal number of steps taken per day?
+## What is mean total number of steps taken per day?
+
+* First I'll help visualize the total number of steps taken each day, using a histogram.
 
 
+```r
+library(ggplot2)
+h <- ggplot(healthData, aes(x = steps)) 
+h + geom_histogram()
+```
+
+```
+## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
+```
+
+![](PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
 
 
 ## What is the average daily activity pattern?

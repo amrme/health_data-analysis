@@ -14,7 +14,7 @@ output:
 
 ```{r}
 healthData <- read.csv2("./activity.csv", sep = ",")
-head(healthData)
+str(healthData)
 ```
 
 ## What is mean total number of steps taken per day?
@@ -23,7 +23,7 @@ head(healthData)
 
 ```{r}
 library(ggplot2)
-h <- ggplot(healthData, aes(x = steps)) 
+h <- ggplot(healthData, aes(x) 
 h + geom_histogram()
 ```
 

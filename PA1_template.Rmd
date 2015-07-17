@@ -30,7 +30,7 @@ stepsPerDay <- split(healthData$steps, healthData$date)
 
 ```{r}
 library(ggplot2)
-h <- ggplot(healthData, aes(x= steps))
+h <- ggplot(healthData, aes(x= sapply(stepsPerDay, mean, na.rm = T)))
 h + geom_histogram()
 ```
 

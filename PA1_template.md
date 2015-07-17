@@ -27,7 +27,7 @@ str(healthData)
 
 ```r
 stepsPerDay <- split(healthData$steps, healthData$date)
-#str(stepsPerDay)
+#head(stepsPerDay)
 ```
 
 * First I'll help visualize the total number of steps taken each day, using a histogram.
@@ -35,8 +35,14 @@ stepsPerDay <- split(healthData$steps, healthData$date)
 
 ```r
 library(ggplot2)
-h <- ggplot(healthData, aes(x= steps))
+h <- ggplot(healthData, aes(x= sapply(stepsPerDay, mean, na.rm = T)))
 h + geom_histogram()
+```
+
+```
+## Warning in data.frame(x = structure(c(NaN, 0.4375, 39.4166666666667,
+## 42.0694444444444, : row names were found from a short variable and have
+## been discarded
 ```
 
 ```

@@ -9,7 +9,7 @@
 
 
 ```r
-healthData <- read.csv2("./activity.csv", sep = ",")
+healthData <- read.csv(unz("activity.zip", "activity.csv"), header = T)
 str(healthData)
 ```
 
@@ -51,6 +51,13 @@ h + geom_histogram()
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
 
+
+
+```r
+hist(sapply(stepsPerDay, mean, na.rm = T))
+```
+
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
 
 
 ## What is the average daily activity pattern?

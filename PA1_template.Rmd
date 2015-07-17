@@ -13,7 +13,7 @@ output:
 * I chose to convert it into a data frame in order to make it easy, to use the data with the ggplot2 plotting system.
 
 ```{r}
-healthData <- read.csv2("./activity.csv", sep = ",")
+healthData <- read.csv(unz("activity.zip", "activity.csv"), header = T)
 str(healthData)
 ```
 
@@ -34,6 +34,10 @@ h <- ggplot(healthData, aes(x= sapply(stepsPerDay, mean, na.rm = T)))
 h + geom_histogram()
 ```
 
+
+```{r}
+hist(sapply(stepsPerDay, mean, na.rm = T))
+```
 
 
 ## What is the average daily activity pattern?

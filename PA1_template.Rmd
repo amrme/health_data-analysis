@@ -29,7 +29,7 @@ stepsPerDay <- split(healthData$steps, healthData$date)
 * First I'll help visualize the total number of steps taken each day, using a histogram.
 
 ```{r}
-hist(sapply(stepsPerDay, sum, na.rm = T))
+hist(sapply(stepsPerDay, sum, na.rm = T), breaks = 8)
 ```
 
 

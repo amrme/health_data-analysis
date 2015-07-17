@@ -34,7 +34,7 @@ stepsPerDay <- split(healthData$steps, healthData$date)
 
 
 ```r
-hist(sapply(stepsPerDay, sum, na.rm = T))
+hist(sapply(stepsPerDay, sum, na.rm = T), breaks = 8)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 

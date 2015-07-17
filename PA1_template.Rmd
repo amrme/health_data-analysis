@@ -10,8 +10,6 @@ output:
 
 * I'm going to load the data from a CSV file into a data frame in the main memory; to perform the rest of the analysis on it.
 
-* I chose to convert it into a data frame in order to make it easy, to use the data with the ggplot2 plotting system.
-
 ```{r}
 healthData <- read.csv(unz("activity.zip", "activity.csv"), header = T)
 str(healthData)
